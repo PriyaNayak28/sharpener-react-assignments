@@ -1,19 +1,17 @@
 import './ExpenseItem.css'
 
-export default function ExpenseItem() {
-  let currentDate = new Date().toString()
-  let expenseLocation = 'bangalore'
+export default function ExpenseItem(props) {
   return (
     <>
       {/* <p>Food - $5</p>
       <p>Petrol - $20</p>
       <p>Movie - $10</p> */}
       <div className="expense-item">
-        <div>
-          <h2 className='".expense-item h2"'>{currentDate}</h2>
+        <div>{props.date.toISOString()}</div>
+        <div className="expense-item__description">
+          <h2>{props.title}</h2>
+          <div className="expense-item__price">${props.price}</div>
         </div>
-        <div className=".expense-item__price">Book-$10</div>
-        <div className=".expense-item__location">{expenseLocation}</div>
       </div>
     </>
   )
