@@ -1,3 +1,5 @@
+import './ExpenseItem.css'
+
 export default function ExpenseItem() {
   let currentDate = new Date().toString()
   return (
@@ -5,10 +7,12 @@ export default function ExpenseItem() {
       {/* <p>Food - $5</p>
       <p>Petrol - $20</p>
       <p>Movie - $10</p> */}
-      <div>
-        <div>{currentDate}</div>
-        <div>Book-$10</div>
-        <div>Delhi</div>
+      <div className="expense-item">
+        <div>
+          <h2 className='".expense-item h2"'>{currentDate}</h2>
+        </div>
+        <div className=".expense-item__price">Book-$10</div>
+        <div className=".expense-item__location">Delhi</div>
       </div>
     </>
   )
