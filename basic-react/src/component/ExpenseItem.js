@@ -8,6 +8,9 @@ export default function ExpenseItem(props) {
       <p>Movie - $10</p> */}
       <div className="expense-item">
         <div>{props.date.toISOString()}</div>
+        <div>
+          <div className="expense-item__location">{props.location}</div>
+        </div>
         <div className="expense-item__description">
           <h2>{props.title}</h2>
           <div className="expense-item__price">${props.price}</div>
