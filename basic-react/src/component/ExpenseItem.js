@@ -1,5 +1,6 @@
 import './ExpenseItem.css'
 import ExpenseDate from './ExpenseDate.js'
+import Card from './Card'
 
 export default function ExpenseItem(props) {
   return (
@@ -8,7 +9,7 @@ export default function ExpenseItem(props) {
       <p>Petrol - $20</p>
       <p>Movie - $10</p> */}
 
-      <div className="expense-item">
+      <Card className="expense-item">
         {/* <div>{props.date.toISOString()}</div> */}
         <ExpenseDate date={props.date}></ExpenseDate>
         <div>
@@ -18,7 +19,7 @@ export default function ExpenseItem(props) {
           <h2>{props.title}</h2>
           <div className="expense-item__price">${props.price}</div>
         </div>
-      </div>
+      </Card>
     </>
   )
 }
